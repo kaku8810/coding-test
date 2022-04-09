@@ -6,6 +6,8 @@ for l in range(n):
 for building in range(4):
     for floor in range(3):
         for room in range(10):
-            print(count[building][floor][room], end=' ')
+            print(" ", count[building][floor][room], sep="", end='')
         print()
+    if building == 3:
+        break
     print("#"*20)
