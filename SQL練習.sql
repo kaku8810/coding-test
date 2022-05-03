@@ -15,3 +15,6 @@ where コード='40'
 
 delete from 都道府県
 where コード='26'
+
+select * from 家計簿
+where メモ like '%1月%'
