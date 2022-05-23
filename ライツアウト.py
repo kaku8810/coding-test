@@ -16,8 +16,7 @@ for i in range(H):
 # クエリ処理
 Q = int(input())
 for i in range(Q):
-    query = list(map(int, input().split()))
-    query_type,p,q = query[0],query[1],query[2]
+    query_type,p,q = map(int, input().split())
 
     # Pushクエリ
     if query_type == 0:
@@ -27,7 +26,7 @@ for i in range(Q):
             x = p + dx[j]
             y = q + dy[j]
             # 座標が盤面内ならば反転
-            if 0 <= x < W and 0 <= y < H:
+            if 0 <= x < H and 0 <= y < W:
                 grid[x][y] = 1 - grid[x][y]
 
     # Getクエリ
