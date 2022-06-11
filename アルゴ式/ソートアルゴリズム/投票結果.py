@@ -3,13 +3,14 @@ N = int(input())
 A = list(map(int, input().split()))
 
 # 集計
-B = []
-for i in range(N):
-    B.append((i, A.count(i)))
+nums = [0] * N
+for a in A:
+    nums[a] += 1
 
+students = [i for i in range(N) ]
 # ソート
-B.sort(key=lambda x: (x[1]), reverse=True)
+students.sort(key=lambda x: nums[x], reverse=True)
 
 # 出力
-for i in B:
-    print(i[0], i[1])
+for i in students:
+    print(i, nums[i])
