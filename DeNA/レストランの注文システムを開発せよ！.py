@@ -36,12 +36,17 @@ def main(lines):
                 menu.append(list(map(int, v.split())))
             elif i > M + 1:
                 order.append(v.split())
+        cooking = []
+        waiting = []
+        for i in order:
+            # 注文
+            if i[0] == 'received' and len(cooking) < K:
+                cooking.append(i[3])
+                print(i[3])
+            elif
 
         
-
     
-                   
-                
 
 if __name__ == '__main__':
     lines = []
