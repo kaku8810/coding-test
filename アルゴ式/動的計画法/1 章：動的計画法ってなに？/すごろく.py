@@ -10,4 +10,11 @@ T[0] = True
 # 動的計画法を計算
 for i in range(1, N + 1):
     for j in range(M):
-        if i - D[j] >= 0 and 
+        if i - D[j] >= 0 and T[i - D[j]]:
+            T[i] = True
+
+# 出力
+if T[-1]:
+    print("Yes")
+else:
+    print("No")
