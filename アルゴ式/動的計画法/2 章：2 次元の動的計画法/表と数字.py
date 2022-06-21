@@ -13,5 +13,14 @@ dp[0][3] = A[3]
 # 順に計算
 for i in range(1, 4):
     for j in range(4):
+        # 真上のマスを足す
+        dp[i][j] += dp[i - 1][j]
+        # 左上のマスを足す
+        if j - 1 >= 0:
+            dp[i][j] += dp[i - 1][j - 1]
+        # 右上のマスを足す
+        if j + 1 < 4:
+            dp[i][j] += dp[i - 1][j + 1]
 
 # 出力
+print(dp[3][3])
