@@ -1,9 +1,0 @@
-a = 1
-b = 1
-print(a,b,end=' ')
-ans = 2
-while ans <= 1000:
-    print(ans, end=' ')
-    a = b
-    b = ans
-    ans = a + b
