@@ -1,9 +1,8 @@
-# 入力
 N, A, B = map(int, input().split())
-S = [input() for i in range(N)]
 
-# 出力
-if S[A][B] == "o":
-    print("YES")
+G = [input() for _ in range(N)]
+
+if G[A][B] == "o":
+    print("Yes")
 else:
-    print("NO")
+    print("No")
