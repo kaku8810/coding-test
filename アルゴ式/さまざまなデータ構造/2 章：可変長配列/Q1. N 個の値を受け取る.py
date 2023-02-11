@@ -4,4 +4,4 @@ A = list(map(int, input().split()))
 
 # 出力
 print(A[k])
-print(A[-k - 1])
+print(A[-(k + 1)])
