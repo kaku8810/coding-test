@@ -1,3 +1,4 @@
+# 入力
 N = int(input())
 
 ans = 0
